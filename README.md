@@ -40,9 +40,7 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
 app/Http/Controllers/FeatureController.php
 
 ## Setup Local
-`
-git clone git@github.com:menardcu/features.git
-cd features
-composer install
-php artisan migrate
-`
+`git clone git@github.com:menardcu/features.git`
+`cd features`
+`composer install`
+`php artisan migrate`
