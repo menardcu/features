@@ -22,3 +22,27 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 ## License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Change LOGS
+### Database migration
+`database/migrations/2021_08_06_124029_create_features_table.php`
+
+### Models: use for all db connection.
+`app/Models/Features.php`
+
+### Repositories: will be all the queries/eloquent
+`app/Repositories/FeaturesRepository.php`
+
+### Services: use for business logic
+`app/Services/FeaturesService.php`
+
+### Controller: use for validation.
+app/Http/Controllers/FeatureController.php
+
+## Setup Local
+`
+git clone git@github.com:menardcu/features.git
+cd features
+composer install
+php artisan migrate
+`
