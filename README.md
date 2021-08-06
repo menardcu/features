@@ -1,4 +1,49 @@
+
+# Host Domain 
+Click here to test: [Features](https://lfeatures.herokuapp.com/)
+
+
+# Technical Assessment 
+## User story: 
+As Product Manager, I would like to manage users’ accesses to new features via feature switches, i.e. enabling/disabling certain feature based on a user’s email and feature names). 
+
+## Requirements: 
+
+### Task 1 (GET Method)
+
+#### Example Request:
+```
+GET /feature?email=XXX&featureName=XXX
+```
+This endpoint receives email (user’s email) and featureName as request parameters and returns the following response in JSON format. 
+
+#### Example Response: 
+```
+{ 
+    "canAccess": true|false (will be true if the user has access to the featureName 
+} 
+```
+
+### Task 2 (POST Method)
+
+#### Request endpoint:
+```
+POST /feature
+```
+This endpoint receives the following request in JSON format and returns an empty response with HTTP Status OK (200) when the database is updated successfully, otherwise returns Hp Status Not Modified (304). 
+
+#### Example Request: 
+```
+{ 
+"featureName": "xxx", (string) 
+"email": "xxx", (string) (user's name) 
+"enable": true|false (boolean) (uses true to enable a user's access, otherwise 
+}
+```
+
+
 # Changes LOG
+
 ## Database migration
 ```
 database/migrations/2021_08_06_124029_create_features_table.php
